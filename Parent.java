@@ -1,16 +1,9 @@
-package extends1.access.parent;
+package extends1.super1;
 
 public class Parent {
-	public int publicValue;
-	protected int protectedValue;
-	int defaultValue;
-	private int privateValue;
+	public String value = "Parent";
 	
-	public void printParent() {
-		System.out.println("== parent 메서드 내부 ==" );
-		System.out.println("public: " + protectedValue);
-		System.out.println("default: " + defaultValue);
-		System.out.println("private: " + privateValue);
-		
+	public void hello() {
+		System.out.println("Parent.hello");
 	}
 }

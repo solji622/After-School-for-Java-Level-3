@@ -1,14 +1,18 @@
-package extends1.access.child;
+package extends1.super1;
 
-import extends1.access.parent.Parent;
-
-public class Child extends Parent {
-	 public void call() {
-		 publicValue = 1;
-		 protectedValue = 1;
-//		 defaultValue = 1; 다른 패키지이기에 접근 불가
-//		 privateValue = 1; 원래 다른 클래스에 접근 불가함
-		 
-		 printParent();
-	 }
+public class Child extends Parent{
+	public String value = "child";
+	
+	@Override
+	public void hello() {
+		System.out.println("Child.hello");
+	}
+	
+	public void call() {
+		System.out.println("자식의 값: " + this.value); // this 생략 가능
+		System.out.println("부모의 값: " + super.value);
+		
+		this.hello();
+		super.hello();
+	}
 }
