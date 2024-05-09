@@ -1,4 +1,4 @@
-package removecontrolflag.after;
+package removecontrolflag.before;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -13,35 +13,35 @@ public class SimpleDataBase {
 	public SimpleDataBase(Reader reader) throws IOException {
 		BufferedReader br = new BufferedReader(reader);
 
-		boolean reading = false;
-		String line;
+		boolean flag = false;
+		String temp;
 
-		while (!reading) {
-			line = br.readLine();
-			if(line == null) {
-				reading = true;
+		while (!flag) {
+			temp = br.readLine();
+			if(temp == null) {
+				flag = true;
 			} else {
-				boolean scanningKey = true;
+				boolean flag2 = true;
 
-				StringBuffer keyBuffer = new StringBuffer();
-				StringBuffer valueBuffer = new StringBuffer();
+				StringBuffer sb1 = new StringBuffer();
+				StringBuffer sb2 = new StringBuffer();
 
-				for (int i=0; i<line.length(); i++) {
-					char c = line.charAt(i);
+				for (int i=0; i<temp.length(); i++) {
+					char temp2 = temp.charAt(i);
 
-					if(scanningKey) {
-						if(c == '=') {
-							scanningKey = false;
+					if(flag2) {
+						if(temp2 == '=') {
+							flag2 = false;
 						} else {
-							keyBuffer.append(c);
+							sb1.append(temp2);
 						}
 					} else {
-						valueBuffer.append(c);
+						sb2.append(temp2);
 					}
 				}
-				String key = keyBuffer.toString();
-				String value = valueBuffer.toString();
-				map.put(key, value);
+				String ss1 = sb1.toString();
+				String ss2 = sb2.toString();
+				map.put(ss1, ss2);
 			}
 		}
 		}

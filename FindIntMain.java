@@ -1,4 +1,4 @@
-package removecontrolflag.after;
+package removecontrolflag.before;
 
 public class FindIntMain {
 	public static void main(String[] args) {
