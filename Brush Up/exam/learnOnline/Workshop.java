@@ -1,6 +1,6 @@
 package learnOnline;
 
-public class Course implements Learnable{
+public class Workshop implements Learnable{
 	private String title;
 	private int time;
 	
@@ -12,7 +12,7 @@ public class Course implements Learnable{
 		return time;
 	}
 	
-	public Course(String title, int time) {
+	public Workshop(String title, int time) {
 		this.title = title;
 		this.time = time;
 	}
