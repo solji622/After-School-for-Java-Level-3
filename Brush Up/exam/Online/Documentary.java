@@ -1,10 +1,10 @@
 package Online;
 
-public class Movie implements Streamable{
+public class Documentary implements Streamable{
 	private String title;
 	private int time;
 	
-	public Movie(String title, int time) {
+	public Documentary(String title, int time) {
 		this.title = title;
 		this.time = time;
 	}
@@ -19,17 +19,16 @@ public class Movie implements Streamable{
 	
 	@Override
 	public void play() {
-		System.out.println("playing Movie: " + title);
+		System.out.println("playing series: " + title);
 	}
 
 	@Override
 	public void stop() {
-		System.out.println("stopping Movie: " + title);
+		System.out.println("stopping series: " + title);
 	}
 	
 	@Override
 	public void pause() {
-		System.out.println("pausing Movie: " + title);
+		System.out.println("pausing series: " + title);
 	}
-	
 }
